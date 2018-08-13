@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_custom_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_circledialog_layout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/title_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:text="确定开启车辆追踪？"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp18" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content_textview"
+                style="@style/dialog_message"
+                android:ems="17"
+                android:gravity="center"
+                android:text="当前无网络连接，请前往设置页面打开蓝牙连接使用" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/colorGrey2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/cancel_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/cancel_textview"
+                style="@style/dialog_btn_text"
+                android:text="取消"
+                android:textColor="@color/blue_send" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vertical_line"
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/colorGrey2" />
+
+        <LinearLayout
+            android:id="@+id/ensure_layout"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/ensure_textview"
+                style="@style/dialog_btn_text"
+                android:text="确认"
+                android:textColor="@color/colorGray5e" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
