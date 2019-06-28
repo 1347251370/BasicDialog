@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
                     public void clickRightBtn() {
                         Toast.makeText(MainActivity.this,"点击了“取消”",Toast.LENGTH_LONG).show();
                     }
-                },MainActivity.this);
+                });
                 basicDialog1.show();
             }
-        },MainActivity.this);
+        });
         basicDialog.show();
     }
 }

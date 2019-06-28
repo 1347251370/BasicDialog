@@ -1,49 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ll_custom_dialog"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_circledialog_layout"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="2.17"
+        android:background="@color/grid_view_bg"
         android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/title_layout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_weight="1.35">
 
             <TextView
                 android:id="@+id/title_textview"
+                style="@style/dialog_message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:ems="10"
                 android:gravity="center_horizontal"
                 android:text="确定开启车辆追踪？"
-                android:textColor="@color/black"
-                android:textSize="@dimen/dp18" />
+                android:textSize="@dimen/dp20"
+                tools:ignore="SpUsage" />
         </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/content_layout"
             android:layout_width="match_parent"
             android:layout_height="0dip"
-            android:layout_weight="2"
-            android:gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/content_textview"
                 style="@style/dialog_message"
-                android:ems="17"
-                android:gravity="center"
+                android:maxEms="17"
                 android:text="当前无网络连接，请前往设置页面打开蓝牙连接使用" />
 
         </LinearLayout>
@@ -51,49 +53,56 @@
 
 
     <ImageView
+        style="@style/dialog_btn_line"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp1"
-        android:background="@color/colorGrey2" />
+        android:layout_marginLeft="@dimen/dp1"
+        android:layout_marginRight="@dimen/dp1"
+        android:visibility="gone"
+        android:contentDescription="TODO" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@color/dialog_btn"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/cancel_layout"
+            android:id="@+id/left_btn_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/dialog_btn_bg"
             android:gravity="center">
 
             <TextView
-                android:id="@+id/cancel_textview"
-                style="@style/dialog_btn_text"
-                android:text="取消"
-                android:textColor="@color/blue_send" />
+                android:id="@+id/left_btn_textview"
+                style="@style/dialog_btn_left_text"
+                android:text="卸载"
+                android:textColor="@color/common_green_10a" />
 
         </LinearLayout>
 
         <View
             android:id="@+id/vertical_line"
-            android:layout_width="1dip"
+            style="@style/dialog_btn_line"
+            android:layout_width="@dimen/dp1"
             android:layout_height="match_parent"
-            android:background="@color/colorGrey2" />
+            android:visibility="gone" />
 
         <LinearLayout
-            android:id="@+id/ensure_layout"
+            android:id="@+id/right_btn_layout"
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/dialog_btn_bg"
             android:gravity="center">
 
             <TextView
-                android:id="@+id/ensure_textview"
-                style="@style/dialog_btn_text"
-                android:text="确认"
-                android:textColor="@color/colorGray5e" />
+                android:id="@+id/right_btn_textview"
+                style="@style/dialog_btn_right_text"
+                android:text="取消" />
 
         </LinearLayout>
 
